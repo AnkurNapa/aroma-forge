@@ -109,8 +109,8 @@ const CONTENT = {
     de: `<li><a href="#builder">Rezept-Builder</a></li><li><a href="#how">So funktioniert's</a></li><li><a href="#styles">Bierstile</a></li><li><a href="#" data-share>Rezept teilen</a></li>`,
   },
   "foot-data": {
-    en: `<li><a href="https://www.weyermann.de/en-us/the-malt-aroma-wheel-2/" target="_blank" rel="noopener">Weyermann® Malt Aroma Wheel®</a></li><li><a href="https://github.com/AnkurNapa/aroma-forge" target="_blank" rel="noopener">Source on GitHub</a></li><li><a href="https://ankurnapa.github.io/indian-brewing-calculator/" target="_blank" rel="noopener">Indian Brewer's Calculator</a></li>`,
-    de: `<li><a href="https://www.weyermann.de/en-us/the-malt-aroma-wheel-2/" target="_blank" rel="noopener">Weyermann® Malzaromarad®</a></li><li><a href="https://github.com/AnkurNapa/aroma-forge" target="_blank" rel="noopener">Quellcode auf GitHub</a></li><li><a href="https://ankurnapa.github.io/indian-brewing-calculator/" target="_blank" rel="noopener">Indian Brewer's Calculator</a></li>`,
+    en: `<li><a href="https://www.weyermann.de/en-us/the-malt-aroma-wheel-2/" target="_blank" rel="noopener">Weyermann® Malt Aroma Wheel®</a></li><li><a href="https://ankurnapa.github.io/indian-brewing-calculator/" target="_blank" rel="noopener">Indian Brewer's Calculator</a></li>`,
+    de: `<li><a href="https://www.weyermann.de/en-us/the-malt-aroma-wheel-2/" target="_blank" rel="noopener">Weyermann® Malzaromarad®</a></li><li><a href="https://ankurnapa.github.io/indian-brewing-calculator/" target="_blank" rel="noopener">Indian Brewer's Calculator</a></li>`,
   },
   "foot-contact": {
     en: `<p>Built by <strong>Ankur Napa</strong><br>Brewer &amp; brewing data scientist</p><a class="contact-btn dark" href="mailto:napaankur@gmail.com">✉ napaankur@gmail.com</a><a class="contact-btn dark" href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">in LinkedIn</a>`,
