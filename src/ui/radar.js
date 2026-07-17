@@ -13,7 +13,7 @@ const pt = (i, v) => {
 };
 const poly = vec => DESCRIPTORS.map((d, i) => pt(i, vec[d.key] || 0).join(",")).join(" ");
 
-export function renderRadar(container, { vector, overlays = [] }) {
+export function renderRadar(container, { vector, overlays = [], compare = null }) {
   const svg = [];
   svg.push(`<svg viewBox="0 0 ${SIZE} ${SIZE}" class="radar" role="img" aria-label="Predicted aroma radar">`);
 
@@ -48,6 +48,11 @@ export function renderRadar(container, { vector, overlays = [] }) {
   overlays.forEach(o => {
     svg.push(`<polygon points="${poly(o.vector)}" fill="none" stroke="${o.color}" stroke-width="1.4" opacity="0.5" stroke-linejoin="round"/>`);
   });
+
+  // compare (recipe B) profile, drawn distinctly beneath the active one
+  if (compare && compare.vector) {
+    svg.push(`<polygon points="${poly(compare.vector)}" fill="rgba(42,148,214,0.12)" stroke="#2a94d6" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round"/>`);
+  }
 
   // combined beer polygon
   svg.push(`<polygon points="${poly(vector)}" class="beer-shape"/>`);
