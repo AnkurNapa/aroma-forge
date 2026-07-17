@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aroma Forge — predict beer flavor from Weyermann malts</title>
+  <meta name="description" content="Drag Weyermann malts into a grist and superimpose their Malt Aroma Wheels to predict the flavor, color and character of the finished beer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/app.css" />
+</head>
+<body>
+  <header class="site-head">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">◍</span>
+      <div>
+        <h1>Aroma Forge</h1>
+        <p class="tagline">Superimpose Weyermann® Malt Aroma Wheels to predict your beer</p>
+      </div>
+    </div>
+    <div class="head-actions">
+      <button id="example" class="btn ghost" type="button">Load example</button>
+      <button id="clear" class="btn ghost" type="button">Clear</button>
+      <button id="share" class="btn" type="button">Share</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="col palette-col" aria-label="Malt palette">
+      <h2 class="col-title">Malts</h2>
+      <div id="palette"></div>
+    </section>
+
+    <section class="col grist-col">
+      <h2 class="col-title">Grist <span class="hint">drag or click malts here</span></h2>
+      <div id="grist" class="dropzone"></div>
+    </section>
+
+    <section class="col result-col">
+      <div class="radar-wrap">
+        <div id="radar"></div>
+        <p class="radar-cap">Combined beer profile (filled) over each malt's wheel (outlines)</p>
+      </div>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <p>Aroma vectors digitized from Weyermann® Malt Aroma Wheels®. Predictions are model estimates for recipe design, not lab measurements. Wheels © Weyermann® Specialty Malts. Method inspired by Voigt &amp; Féchir (Trier University) malt-aroma research.</p>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+:root {
+  /* Malthouse palette — deep roast + copper + cream */
+  --bg:         #17110d;
+  --bg-2:       #1f1712;
+  --surface:    #241a13;
+  --surface-2:  #2c2018;
+  --line:       #3a2b20;
+  --text:       #f3e7d8;
+  --text-dim:   #b6a48f;
+  --muted:      #8a7663;
+
+  --copper:     #c8792f;
+  --amber:      #e0b23a;
+  --amber-soft: #f0c964;
+  --roast:      #8a2d17;
+  --red:        #c0392b;
+
+  --grid:       rgba(240, 220, 190, 0.10);
+  --spoke:      rgba(240, 220, 190, 0.14);
+
+  --radius:     14px;
+  --radius-sm:  9px;
+  --shadow:     0 10px 30px rgba(0,0,0,0.45);
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --space: clamp(0.9rem, 0.7rem + 0.6vw, 1.35rem);
+  --dur: 200ms;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
