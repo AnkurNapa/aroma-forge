@@ -2,6 +2,7 @@
 // faint superimposed per-malt polygons, on a Weyermann-style colored wheel.
 
 import { DESCRIPTORS, GROUP_COLOR } from "../descriptors.js";
+import { dLabel } from "../i18n.js";
 
 const SIZE = 520, CX = SIZE / 2, CY = SIZE / 2, R = 190, MAXV = 5;
 const N = DESCRIPTORS.length;
@@ -41,7 +42,7 @@ export function renderRadar(container, { vector, overlays = [], compare = null }
     svg.push(`<line x1="${CX}" y1="${CY}" x2="${x}" y2="${y}" class="spoke"/>`);
     const [lx, ly] = pt(i, MAXV + 0.85);
     const anchor = Math.abs(lx - CX) < 6 ? "middle" : lx > CX ? "start" : "end";
-    svg.push(`<text x="${lx}" y="${ly}" class="axis-label" text-anchor="${anchor}" dominant-baseline="middle">${d.key}</text>`);
+    svg.push(`<text x="${lx}" y="${ly}" class="axis-label" text-anchor="${anchor}" dominant-baseline="middle">${dLabel(d.key)}</text>`);
   });
 
   // faint superimposed per-malt polygons

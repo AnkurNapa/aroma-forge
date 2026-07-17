@@ -13,46 +13,64 @@
 </head>
 <body>
   <header class="site-head">
-    <button id="share" class="btn ghost head-left" type="button"><span aria-hidden="true">⇪</span> Share</button>
+    <button id="share" class="btn ghost head-left" type="button"><span aria-hidden="true">⇪</span> <span data-i18n="share">Share</span></button>
     <div class="brand">
       <span class="mark" aria-hidden="true">◍</span>
       <div class="brand-text">
         <h1>Aroma Forge</h1>
-        <p class="tagline">Superimpose Weyermann® Malt Aroma Wheels to predict your beer</p>
+        <p class="tagline" data-i18n="tagline">Superimpose Weyermann® Malt Aroma Wheels to predict your beer</p>
       </div>
     </div>
     <div class="head-actions">
-      <button id="example" class="btn ghost" type="button">Example</button>
-      <button id="clear" class="btn ghost" type="button">Clear</button>
+      <button id="lang" class="btn ghost lang" type="button">DE</button>
+      <button id="example" class="btn ghost" type="button" data-i18n="example">Example</button>
+      <button id="clear" class="btn ghost" type="button" data-i18n="clear">Clear</button>
     </div>
   </header>
 
+  <div class="notice" role="note" id="notice"></div>
+
   <main class="layout">
     <section class="card palette-col">
-      <div class="card-head"><span class="ch-icon">▤</span><h2>Malts</h2></div>
+      <div class="card-head"><span class="ch-icon">▤</span><h2 data-i18n="malts">Malts</h2></div>
       <div id="palette"></div>
     </section>
 
     <section class="card grist-col">
-      <div class="card-head"><span class="ch-icon">⚗</span><h2>Grist</h2><span class="ch-hint">drag or click malts here</span></div>
+      <div class="card-head"><span class="ch-icon">⚗</span><h2 data-i18n="grist">Grist</h2><span class="ch-hint" data-i18n="dragHint">drag or click malts here</span></div>
       <div id="grist" class="dropzone"></div>
-      <div class="card-head sub"><span class="ch-icon">★</span><h2>Recipes</h2></div>
+      <div class="card-head sub"><span class="ch-icon">★</span><h2 data-i18n="recipes">Recipes</h2></div>
       <div id="recipes"></div>
     </section>
 
     <section class="card result-col">
-      <div class="card-head"><span class="ch-icon">◉</span><h2>Predicted beer</h2></div>
+      <div class="card-head"><span class="ch-icon">◉</span><h2 data-i18n="predictedBeer">Predicted beer</h2></div>
       <div class="radar-wrap">
         <div id="radar"></div>
-        <p class="radar-cap">Combined profile (filled) over each malt's wheel (outlines)</p>
+        <p class="radar-cap" data-i18n="radarCap">Combined profile (filled) over each malt's wheel (outlines)</p>
       </div>
       <div id="results"></div>
     </section>
   </main>
 
-  <footer class="site-foot">
-    <p>Aroma vectors digitized from Weyermann® Malt Aroma Wheels®. Predictions are model estimates for recipe design, not lab measurements. Wheels © Weyermann® Specialty Malts. Method inspired by Voigt &amp; Féchir (Trier University) malt-aroma research. Built by Ankur Napa.</p>
-  </footer>
+  <section class="about-wrap">
+    <div class="card about">
+      <div class="card-head"><span class="ch-icon">ⓘ</span><h2 data-i18n="aboutTitle">What this is &amp; how to use it</h2></div>
+      <div class="about-grid">
+        <div class="about-col">
+          <h3 data-i18n="whatDoes">What it does</h3>
+          <div id="about-what"></div>
+        </div>
+        <div class="about-col">
+          <h3 data-i18n="howUse">How a brewer uses it</h3>
+          <ul class="use-list" id="about-how"></ul>
+        </div>
+      </div>
+      <div class="contact" id="about-contact"></div>
+    </div>
+  </section>
+
+  <footer class="site-foot"><p id="foot"></p></footer>
 
   <script type="module" src="./src/main.js"></script>
 </body>

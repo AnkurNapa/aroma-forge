@@ -9,6 +9,7 @@ import { renderResults } from "./ui/results.js";
 import { renderRecipes } from "./ui/recipes.js";
 import { encodeRecipe, decodeRecipe, saveRecipe, deleteRecipe, loadAll } from "./store.js";
 import { $ } from "./ui/dom.js";
+import { initLang, setLang, getLang, t, content, CONTENT_IDS } from "./i18n.js";
 
 const OVERLAY_COLORS = ["#e0b23a", "#d9772b", "#8a2d17", "#4f9b34", "#2a94d6", "#b07bd0"];
 
@@ -20,12 +21,19 @@ let palette;
 init();
 
 async function init() {
+  initLang();
   [MALTS, wheelMap] = await Promise.all([
     fetch("./data/malts.json").then(r => r.json()),
     fetch("./data/wheel_map.json").then(r => r.json()).catch(() => ({})),
   ]);
   byId = Object.fromEntries(MALTS.map(m => [m.id, m]));
   loadFromHash();
+  applyStaticI18n();
+  $("#lang").addEventListener("click", () => {
+    setLang(getLang() === "en" ? "de" : "en");
+    applyStaticI18n();
+    render();
+  });
 
   palette = renderPalette($("#palette"), MALTS, {
     onAdd: addMalt, inGrist: id => state.entries.some(e => e.malt.id === id),
@@ -44,6 +52,14 @@ async function init() {
   $("#example").addEventListener("click", loadExample);
 
   render();
+}
+
+function applyStaticI18n() {
+  document.documentElement.lang = getLang();
+  document.querySelectorAll("[data-i18n]").forEach(elm => { elm.textContent = t(elm.getAttribute("data-i18n")); });
+  for (const id of CONTENT_IDS) { const node = document.getElementById(id); if (node) node.innerHTML = content(id); }
+  const s = document.querySelector(".search"); if (s) s.placeholder = t("searchPh");
+  $("#lang").textContent = getLang() === "en" ? "DE" : "EN";
 }
 
 function addMalt(id) {
@@ -107,7 +123,8 @@ function render() {
 function writeHash() {
   const g = state.entries.map(e => `${e.malt.id}:${e.grams}`).join(",");
   const b = `${state.batch.volumeL}-${state.batch.efficiency}-${state.batch.attenuation}`;
-  history.replaceState(null, "", location.pathname + (g ? `#g=${encodeURIComponent(g)}&b=${b}` : ""));
+  const l = `&l=${getLang()}`;
+  history.replaceState(null, "", location.pathname + (g ? `#g=${encodeURIComponent(g)}&b=${b}${l}` : `#l=${getLang()}`));
 }
 function loadFromHash() {
   const h = new URLSearchParams(location.hash.slice(1));

@@ -3,6 +3,7 @@
 import { el } from "./dom.js";
 import { GROUP_COLOR } from "../descriptors.js";
 import { dominantNotes } from "../engine/superpose.js";
+import { t, dLabel, sName } from "../i18n.js";
 
 export function renderResults(container, opts) {
   const { vector, contributions, est, note, styles, hasAroma, wheelMap, compare } = opts;
@@ -16,7 +17,7 @@ export function renderResults(container, opts) {
         el("div", { class: "swatch", style: `background:${est.hex}` }),
         el("div", { class: "swatch-cap" }, el("strong", { text: `${est.ebc} EBC` }), el("span", { text: `${est.srm} SRM` })),
       ),
-      stat("OG", est.og.toFixed(3)), stat("ABV", est.abv > 0 ? est.abv + "%" : "—"), stat("Grain", est.totalKg + " kg"),
+      stat(t("og"), est.og.toFixed(3)), stat(t("abv"), est.abv > 0 ? est.abv + "%" : "—"), stat(t("grainStat"), est.totalKg + " kg"),
     );
   }
   container.append(strip);
@@ -32,20 +33,20 @@ export function renderResults(container, opts) {
 
   // Tasting note
   container.append(el("div", { class: "tasting" },
-    el("div", { class: "tasting-label", text: "Predicted tasting note" }),
+    el("div", { class: "tasting-label", text: t("tastingLabel") }),
     el("p", { class: "tasting-note", text: note }),
   ));
 
   // Style matches
   if (hasAroma && styles && styles.length) {
     const wrap = el("div", { class: "styles-block" });
-    wrap.append(el("div", { class: "block-label", text: "Closest beer styles" }));
+    wrap.append(el("div", { class: "block-label", text: t("closestStyles") }));
     styles.forEach((s, i) => {
       const gap = s.gaps.length
-        ? s.gaps.map(g => `${g.d > 0 ? "more" : "less"} ${g.k.toLowerCase()}`).join(", ")
-        : "on target";
+        ? s.gaps.map(g => `${g.d > 0 ? t("more") : t("less")} ${dLabel(g.k).toLowerCase()}`).join(", ")
+        : t("onTarget");
       wrap.append(el("div", { class: "style-row" + (i === 0 ? " top" : "") },
-        el("span", { class: "st-name", text: s.name }),
+        el("span", { class: "st-name", text: sName(s.name) }),
         el("span", { class: "st-meter" }, el("i", { style: `width:${s.score}%` })),
         el("span", { class: "st-score", text: s.score + "%" }),
         el("span", { class: "st-gap", text: gap }),
@@ -60,12 +61,12 @@ export function renderResults(container, opts) {
     const chips = el("div", { class: "note-chips" });
     for (const n of notes) {
       chips.append(el("span", { class: "note-chip" },
-        el("span", { class: "nc-key", text: n.key }),
+        el("span", { class: "nc-key", text: dLabel(n.key) }),
         el("span", { class: "nc-bar" }, el("i", { style: `width:${(n.value / 5) * 100}%; background:${GROUP_COLOR[n.group]}` })),
         el("span", { class: "nc-val", text: n.value.toFixed(1) }),
       ));
     }
-    container.append(el("div", { class: "notes-block" }, el("div", { class: "block-label", text: "Dominant notes" }), chips));
+    container.append(el("div", { class: "notes-block" }, el("div", { class: "block-label", text: t("dominantNotes") }), chips));
   }
 
   // Drivers
@@ -75,16 +76,16 @@ export function renderResults(container, opts) {
       const list = (contributions[n.key] || []).filter(d => d.amount > 0.05);
       if (!list.length) continue;
       drv.append(el("div", { class: "driver-row" },
-        el("span", { class: "dr-note", text: n.key }),
-        el("span", { class: "dr-from", text: "from " + list.map(d => d.name).join(", ") })));
+        el("span", { class: "dr-note", text: dLabel(n.key) }),
+        el("span", { class: "dr-from", text: t("from") + " " + list.map(d => d.name).join(", ") })));
     }
-    if (drv.children.length) container.append(el("div", { class: "notes-block" }, el("div", { class: "block-label", text: "What drives them" }), drv));
+    if (drv.children.length) container.append(el("div", { class: "notes-block" }, el("div", { class: "block-label", text: t("whatDrives") }), drv));
   }
 
   // Dominant malt's real wheel
   if (hasAroma && opts.dominantMalt && wheelMap && wheelMap[opts.dominantMalt.id]) {
     container.append(el("details", { class: "wheel-detail" },
-      el("summary", {}, `Actual Weyermann wheel — ${opts.dominantMalt.name}`),
+      el("summary", {}, `${t("actualWheel")} — ${opts.dominantMalt.name}`),
       el("img", { class: "real-wheel", loading: "lazy", alt: `${opts.dominantMalt.name} aroma wheel`, src: `./assets/wheels/${opts.dominantMalt.id}.png` }),
     ));
   }

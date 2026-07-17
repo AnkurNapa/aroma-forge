@@ -1,32 +1,34 @@
 :root {
-  /* Light "brewing lab notebook" palette — matches Indian Brewer's Calculator */
-  --bg:         #f4f6f8;
-  --bg-tint:    #eef1f4;
+  /* Weyermann-inspired palette — crimson + gold on warm cream.
+     (Independent tool; not official Weyermann branding.) */
+  --bg:         #e7e4e0;
+  --bg-tint:    #dedad5;
   --surface:    #ffffff;
-  --surface-2:  #f5f7f9;
-  --line:       #e4e8ec;
-  --line-soft:  #eef1f4;
+  --surface-2:  #f4f1ec;
+  --line:       #ddd6cd;
+  --line-soft:  #ebe6df;
 
-  --text:       #24384f;   /* navy heading */
-  --text-body:  #3d5063;
-  --text-dim:   #6b7c8c;
-  --muted:      #94a3b1;
+  --text:       #2a2724;   /* near-black charcoal */
+  --text-body:  #45403b;
+  --text-dim:   #6c655d;
+  --muted:      #948c82;
 
-  --orange:     #e8792b;
-  --orange-2:   #f0913f;
-  --orange-tint:#fdf1e7;
-  --teal:       #1a9d9d;
-  --teal-dark:  #148686;
-  --teal-tint:  #e7f6f6;
-  --red:        #d64545;
-  --red-tint:   #fdecec;
+  /* Primary = Weyermann crimson; secondary = malt gold */
+  --orange:     #d5102f;
+  --orange-2:   #e23048;
+  --orange-tint:#fbe9ec;
+  --teal:       #c99a2e;
+  --teal-dark:  #a37c1e;
+  --teal-tint:  #f7efd9;
+  --red:        #b00d26;
+  --red-tint:   #fbe6e9;
   --green:      #4f9b34;
 
   --radius:     16px;
   --radius-sm:  10px;
   --radius-pill:999px;
-  --shadow:     0 4px 18px rgba(30, 50, 80, 0.06);
-  --shadow-sm:  0 2px 8px rgba(30, 50, 80, 0.05);
+  --shadow:     0 4px 18px rgba(60, 40, 30, 0.10);
+  --shadow-sm:  0 2px 8px rgba(60, 40, 30, 0.08);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;

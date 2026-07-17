@@ -1,5 +1,6 @@
 // Grist builder: rows of malt + grams, with live % of total. Drop target for palette drags.
 import { el } from "./dom.js";
+import { t } from "../i18n.js";
 
 export function renderGrist(container, entries, { onChange, onRemove, batch, onBatch }) {
   container.innerHTML = "";
@@ -7,7 +8,7 @@ export function renderGrist(container, entries, { onChange, onRemove, batch, onB
 
   const rows = el("div", { class: "grist-rows" });
   if (!entries.length) {
-    rows.append(el("div", { class: "grist-empty", text: "Drag or click malts to build your grist." }));
+    rows.append(el("div", { class: "grist-empty", text: t("gristEmpty") }));
   }
   entries.forEach((e, i) => {
     const pct = total ? (100 * e.grams / total) : 0;
@@ -26,10 +27,10 @@ export function renderGrist(container, entries, { onChange, onRemove, batch, onB
   });
 
   const batchPanel = el("div", { class: "batch" },
-    batchField("Batch", batch.volumeL, "L", 1, v => onBatch({ ...batch, volumeL: v })),
-    batchField("Efficiency", batch.efficiency, "%", 1, v => onBatch({ ...batch, efficiency: v })),
-    batchField("Attenuation", batch.attenuation, "%", 1, v => onBatch({ ...batch, attenuation: v })),
-    el("div", { class: "batch-total", text: total ? `${(total / 1000).toFixed(2)} kg grain` : "" }),
+    batchField(t("batch"), batch.volumeL, "L", 1, v => onBatch({ ...batch, volumeL: v })),
+    batchField(t("efficiency"), batch.efficiency, "%", 1, v => onBatch({ ...batch, efficiency: v })),
+    batchField(t("attenuation"), batch.attenuation, "%", 1, v => onBatch({ ...batch, attenuation: v })),
+    el("div", { class: "batch-total", text: total ? `${(total / 1000).toFixed(2)} ${t("grainKg")}` : "" }),
   );
 
   container.append(rows, batchPanel);
