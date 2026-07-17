@@ -50,6 +50,11 @@ async function init() {
   $("#share").addEventListener("click", share);
   $("#clear").addEventListener("click", () => { state.entries = []; render(); });
   $("#example").addEventListener("click", loadExample);
+  // footer "Share this recipe" link (rendered via i18n content)
+  document.addEventListener("click", e => {
+    const s = e.target.closest("[data-share]");
+    if (s) { e.preventDefault(); share(); }
+  });
 
   render();
 }

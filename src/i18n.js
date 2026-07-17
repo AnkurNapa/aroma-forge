@@ -37,6 +37,11 @@ const UI = {
   actualWheel:  { en: "Actual Weyermann wheel", de: "Original Weyermann-Rad" },
   aboutTitle:   { en: "What this is & how to use it", de: "Was das ist & wie man es nutzt" },
   whatDoes:     { en: "What it does", de: "Was es macht" }, howUse: { en: "How a brewer uses it", de: "Wie ein Brauer es nutzt" },
+  indieTag:     { en: "Independent, non-commercial tool", de: "Unabhängiges, nicht-kommerzielles Werkzeug" },
+  navBuilder:   { en: "Recipe builder", de: "Rezept-Builder" }, navHow: { en: "How it works", de: "So funktioniert's" },
+  navStyles:    { en: "Beer styles", de: "Bierstile" }, navAbout: { en: "About", de: "Über" }, navSource: { en: "Source", de: "Quellcode" },
+  footTool:     { en: "The tool", de: "Das Werkzeug" }, footData: { en: "Data & method", de: "Daten & Methode" },
+  footContact:  { en: "Contact", de: "Kontakt" }, backToTop: { en: "Back to top ↑", de: "Nach oben ↑" },
 };
 export const t = k => (UI[k] ? UI[k][LANG] : k);
 
@@ -92,8 +97,24 @@ const CONTENT = {
       <a class="contact-btn" href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">in LinkedIn</a>`,
   },
   foot: {
-    en: `<strong>Independent, non-commercial project — not affiliated with or endorsed by Weyermann® Specialty Malts.</strong> Aroma vectors digitized from Weyermann's publicly published Malt Aroma Wheels® for educational use. Predictions are model estimates for recipe design, not lab measurements. Wheels and trademarks © Weyermann® Specialty Malts. Method inspired by Voigt &amp; Féchir (Trier University) malt-aroma research. Built by <a href="mailto:napaankur@gmail.com">Ankur Napa</a> · <a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">LinkedIn</a>.`,
-    de: `<strong>Unabhängiges, nicht-kommerzielles Projekt — nicht mit Weyermann® Spezialmalze verbunden oder von ihnen unterstützt.</strong> Aromawerte aus Weyermanns öffentlich veröffentlichten Malzaromarädern® für Bildungszwecke digitalisiert. Vorhersagen sind Modellschätzungen für den Rezeptentwurf, keine Labormessungen. Räder und Marken © Weyermann® Spezialmalze. Methode inspiriert von Voigt &amp; Féchir (Hochschule Trier). Erstellt von <a href="mailto:napaankur@gmail.com">Ankur Napa</a> · <a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">LinkedIn</a>.`,
+    en: `<strong>Independent, non-commercial project — not affiliated with or endorsed by Weyermann® Specialty Malts.</strong> Aroma vectors digitized from Weyermann's publicly published Malt Aroma Wheels® for educational use. Predictions are model estimates for recipe design, not lab measurements. Wheels and trademarks © Weyermann® Specialty Malts. Method inspired by Voigt &amp; Féchir (Trier University) malt-aroma research.`,
+    de: `<strong>Unabhängiges, nicht-kommerzielles Projekt — nicht mit Weyermann® Spezialmalze verbunden oder von ihnen unterstützt.</strong> Aromawerte aus Weyermanns öffentlich veröffentlichten Malzaromarädern® für Bildungszwecke digitalisiert. Vorhersagen sind Modellschätzungen für den Rezeptentwurf, keine Labormessungen. Räder und Marken © Weyermann® Spezialmalze. Methode inspiriert von Voigt &amp; Féchir (Hochschule Trier).`,
+  },
+  "foot-blurb": {
+    en: `Predict a beer's flavor by superimposing the Malt Aroma Wheels of a Weyermann® grist — aroma radar, color, ABV, style match and a tasting note.`,
+    de: `Sagt den Biergeschmack voraus, indem es die Malzaromaräder einer Weyermann®-Schüttung überlagert — Aromarad, Farbe, Alkohol, Stilabgleich und Geschmacksnotiz.`,
+  },
+  "foot-tool": {
+    en: `<li><a href="#builder">Recipe builder</a></li><li><a href="#how">How it works</a></li><li><a href="#styles">Beer styles</a></li><li><a href="#" data-share>Share this recipe</a></li>`,
+    de: `<li><a href="#builder">Rezept-Builder</a></li><li><a href="#how">So funktioniert's</a></li><li><a href="#styles">Bierstile</a></li><li><a href="#" data-share>Rezept teilen</a></li>`,
+  },
+  "foot-data": {
+    en: `<li><a href="https://www.weyermann.de/en-us/the-malt-aroma-wheel-2/" target="_blank" rel="noopener">Weyermann® Malt Aroma Wheel®</a></li><li><a href="https://github.com/AnkurNapa/aroma-forge" target="_blank" rel="noopener">Source on GitHub</a></li><li><a href="https://ankurnapa.github.io/indian-brewing-calculator/" target="_blank" rel="noopener">Indian Brewer's Calculator</a></li>`,
+    de: `<li><a href="https://www.weyermann.de/en-us/the-malt-aroma-wheel-2/" target="_blank" rel="noopener">Weyermann® Malzaromarad®</a></li><li><a href="https://github.com/AnkurNapa/aroma-forge" target="_blank" rel="noopener">Quellcode auf GitHub</a></li><li><a href="https://ankurnapa.github.io/indian-brewing-calculator/" target="_blank" rel="noopener">Indian Brewer's Calculator</a></li>`,
+  },
+  "foot-contact": {
+    en: `<p>Built by <strong>Ankur Napa</strong><br>Brewer &amp; brewing data scientist</p><a class="contact-btn dark" href="mailto:napaankur@gmail.com">✉ napaankur@gmail.com</a><a class="contact-btn dark" href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">in LinkedIn</a>`,
+    de: `<p>Erstellt von <strong>Ankur Napa</strong><br>Brauer &amp; Brau-Data-Scientist</p><a class="contact-btn dark" href="mailto:napaankur@gmail.com">✉ napaankur@gmail.com</a><a class="contact-btn dark" href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">in LinkedIn</a>`,
   },
 };
 export const content = id => (CONTENT[id] ? CONTENT[id][LANG] : "");

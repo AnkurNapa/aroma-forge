@@ -12,25 +12,49 @@
   <link rel="stylesheet" href="./styles/app.css" />
 </head>
 <body>
-  <header class="site-head">
-    <button id="share" class="btn ghost head-left" type="button"><span aria-hidden="true">⇪</span> <span data-i18n="share">Share</span></button>
-    <div class="brand">
-      <span class="mark" aria-hidden="true">◍</span>
-      <div class="brand-text">
-        <h1>Aroma Forge</h1>
-        <p class="tagline" data-i18n="tagline">Superimpose Weyermann® Malt Aroma Wheels to predict your beer</p>
-      </div>
+  <div class="topbar" id="top">
+    <span class="indie" data-i18n="indieTag">Independent, non-commercial tool</span>
+    <div class="topbar-right">
+      <a class="top-link" href="https://github.com/AnkurNapa/aroma-forge" target="_blank" rel="noopener" data-i18n="navSource">Source</a>
+      <button id="lang" class="lang-toggle" type="button">DE</button>
     </div>
+  </div>
+
+  <header class="masthead">
+    <a class="brand" href="#builder" aria-label="Aroma Forge — home">
+      <svg class="seal" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="#c99a2e"/>
+        <circle cx="24" cy="24" r="19.5" fill="none" stroke="#8a1220" stroke-width="1.4"/>
+        <g stroke="#8a1220" stroke-width="1.5" stroke-linecap="round">
+          <line x1="24" y1="7" x2="24" y2="41"/><line x1="7" y1="24" x2="41" y2="24"/>
+          <line x1="12" y1="12" x2="36" y2="36"/><line x1="36" y1="12" x2="12" y2="36"/>
+        </g>
+        <circle cx="24" cy="24" r="6.5" fill="#d5102f"/>
+      </svg>
+      <span class="wordmark">
+        <span class="wm-name">AROMA&nbsp;FORGE</span>
+        <span class="wm-tag" data-i18n="tagline">Superimpose Weyermann® Malt Aroma Wheels to predict your beer</span>
+      </span>
+    </a>
     <div class="head-actions">
-      <button id="lang" class="btn ghost lang" type="button">DE</button>
       <button id="example" class="btn ghost" type="button" data-i18n="example">Example</button>
       <button id="clear" class="btn ghost" type="button" data-i18n="clear">Clear</button>
+      <button id="share" class="btn" type="button"><span aria-hidden="true">⇪</span> <span data-i18n="share">Share</span></button>
     </div>
   </header>
 
+  <nav class="mainnav" aria-label="Sections">
+    <ul>
+      <li><a href="#builder" data-i18n="navBuilder">Recipe builder</a></li>
+      <li><a href="#styles" data-i18n="navStyles">Beer styles</a></li>
+      <li><a href="#how" data-i18n="navHow">How it works</a></li>
+      <li><a href="#how" data-i18n="navAbout">About</a></li>
+    </ul>
+  </nav>
+
   <div class="notice" role="note" id="notice"></div>
 
-  <main class="layout">
+  <main class="layout" id="builder">
     <section class="card palette-col">
       <div class="card-head"><span class="ch-icon">▤</span><h2 data-i18n="malts">Malts</h2></div>
       <div id="palette"></div>
@@ -43,7 +67,7 @@
       <div id="recipes"></div>
     </section>
 
-    <section class="card result-col">
+    <section class="card result-col" id="styles">
       <div class="card-head"><span class="ch-icon">◉</span><h2 data-i18n="predictedBeer">Predicted beer</h2></div>
       <div class="radar-wrap">
         <div id="radar"></div>
@@ -53,7 +77,7 @@
     </section>
   </main>
 
-  <section class="about-wrap">
+  <section class="about-wrap" id="how">
     <div class="card about">
       <div class="card-head"><span class="ch-icon">ⓘ</span><h2 data-i18n="aboutTitle">What this is &amp; how to use it</h2></div>
       <div class="about-grid">
@@ -70,7 +94,33 @@
     </div>
   </section>
 
-  <footer class="site-foot"><p id="foot"></p></footer>
+  <footer class="site-foot">
+    <div class="foot-cols">
+      <div class="foot-brand">
+        <div class="foot-mark">
+          <svg class="seal small" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" fill="#c99a2e"/>
+            <circle cx="24" cy="24" r="19.5" fill="none" stroke="#8a1220" stroke-width="1.4"/>
+            <g stroke="#8a1220" stroke-width="1.5" stroke-linecap="round">
+              <line x1="24" y1="7" x2="24" y2="41"/><line x1="7" y1="24" x2="41" y2="24"/>
+              <line x1="12" y1="12" x2="36" y2="36"/><line x1="36" y1="12" x2="12" y2="36"/>
+            </g>
+            <circle cx="24" cy="24" r="6.5" fill="#d5102f"/>
+          </svg>
+          <span class="foot-name">AROMA FORGE</span>
+        </div>
+        <p id="foot-blurb" class="foot-blurb"></p>
+      </div>
+      <div class="foot-col"><h4 data-i18n="footTool">The tool</h4><ul id="foot-tool"></ul></div>
+      <div class="foot-col"><h4 data-i18n="footData">Data &amp; method</h4><ul id="foot-data"></ul></div>
+      <div class="foot-col contact-col"><h4 data-i18n="footContact">Contact</h4><div id="foot-contact"></div></div>
+    </div>
+    <div class="foot-legal"><p id="foot"></p></div>
+    <div class="foot-bottom">
+      <span>© 2026 Ankur Napa · Aroma Forge</span>
+      <a href="#top" class="to-top" data-i18n="backToTop">Back to top ↑</a>
+    </div>
+  </footer>
 
   <script type="module" src="./src/main.js"></script>
 </body>
