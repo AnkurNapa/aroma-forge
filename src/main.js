@@ -28,6 +28,7 @@ async function init() {
   ]);
   byId = Object.fromEntries(MALTS.map(m => [m.id, m]));
   loadFromHash();
+  detectFromCalc();
   applyStaticI18n();
   $("#lang").addEventListener("click", () => {
     setLang(getLang() === "en" ? "de" : "en");
@@ -59,12 +60,24 @@ async function init() {
   render();
 }
 
+let fromCalc = false;
+function detectFromCalc() {
+  fromCalc = new URLSearchParams(location.hash.slice(1)).get("from") === "ibc";
+  const bar = $("#fromcalc");
+  if (bar) bar.hidden = !fromCalc;
+}
+
 function applyStaticI18n() {
   document.documentElement.lang = getLang();
   document.querySelectorAll("[data-i18n]").forEach(elm => { elm.textContent = t(elm.getAttribute("data-i18n")); });
   for (const id of CONTENT_IDS) { const node = document.getElementById(id); if (node) node.innerHTML = content(id); }
   const s = document.querySelector(".search"); if (s) s.placeholder = t("searchPh");
   $("#lang").textContent = getLang() === "en" ? "DE" : "EN";
+  if (fromCalc) {
+    const msg = $("#fromcalc-msg"), back = $("#fromcalc-back");
+    if (msg) msg.textContent = t("fromCalc") + " ";
+    if (back) back.textContent = t("backToCalc");
+  }
 }
 
 function addMalt(id) {
@@ -129,7 +142,8 @@ function writeHash() {
   const g = state.entries.map(e => `${e.malt.id}:${e.grams}`).join(",");
   const b = `${state.batch.volumeL}-${state.batch.efficiency}-${state.batch.attenuation}`;
   const l = `&l=${getLang()}`;
-  history.replaceState(null, "", location.pathname + (g ? `#g=${encodeURIComponent(g)}&b=${b}${l}` : `#l=${getLang()}`));
+  const from = fromCalc ? "&from=ibc" : "";
+  history.replaceState(null, "", location.pathname + (g ? `#g=${encodeURIComponent(g)}&b=${b}${l}${from}` : `#l=${getLang()}${from}`));
 }
 function loadFromHash() {
   const h = new URLSearchParams(location.hash.slice(1));

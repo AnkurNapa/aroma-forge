@@ -10,6 +10,17 @@ body {
   border-top: 5px solid var(--orange); /* Weyermann crimson accent */
 }
 
+/* "Opened from calculator" banner */
+.fromcalc {
+  display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  margin: 0 clamp(1rem, 0.5rem + 2vw, 2.4rem); margin-top: 0.6rem;
+  padding: 0.55rem 0.9rem; text-decoration: none;
+  background: var(--teal-tint); border: 1px solid var(--teal); border-radius: var(--radius-sm);
+  font-size: 0.82rem; color: var(--teal-dark);
+}
+.fromcalc:hover { background: #dff2f2; }
+.fromcalc-back { font-weight: 700; }
+
 /* Non-affiliation notice */
 .notice {
   max-width: 1500px; margin: 0 auto 0.4rem; padding: 0.6rem 1rem;

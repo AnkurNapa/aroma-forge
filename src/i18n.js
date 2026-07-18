@@ -42,6 +42,8 @@ const UI = {
   navStyles:    { en: "Beer styles", de: "Bierstile" }, navAbout: { en: "About", de: "Über" }, navSource: { en: "Source", de: "Quellcode" },
   footTool:     { en: "The tool", de: "Das Werkzeug" }, footData: { en: "Data & method", de: "Daten & Methode" },
   footContact:  { en: "Contact", de: "Kontakt" }, backToTop: { en: "Back to top ↑", de: "Nach oben ↑" },
+  fromCalc:     { en: "Grist loaded from the Indian Brewer's Calculator.", de: "Schüttung aus dem Indian Brewer's Calculator geladen." },
+  backToCalc:   { en: "← Back to calculator", de: "← Zurück zum Rechner" },
 };
 export const t = k => (UI[k] ? UI[k][LANG] : k);
 
