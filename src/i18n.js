@@ -99,8 +99,8 @@ const CONTENT = {
       <a class="contact-btn" href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">in LinkedIn</a>`,
   },
   foot: {
-    en: `<strong>Independent, non-commercial project — not affiliated with or endorsed by Weyermann® Specialty Malts.</strong> Aroma vectors digitized from Weyermann's publicly published Malt Aroma Wheels® for educational use. Predictions are model estimates for recipe design, not lab measurements. Wheels and trademarks © Weyermann® Specialty Malts. Method inspired by Voigt &amp; Féchir (Trier University) malt-aroma research.`,
-    de: `<strong>Unabhängiges, nicht-kommerzielles Projekt — nicht mit Weyermann® Spezialmalze verbunden oder von ihnen unterstützt.</strong> Aromawerte aus Weyermanns öffentlich veröffentlichten Malzaromarädern® für Bildungszwecke digitalisiert. Vorhersagen sind Modellschätzungen für den Rezeptentwurf, keine Labormessungen. Räder und Marken © Weyermann® Spezialmalze. Methode inspiriert von Voigt &amp; Féchir (Hochschule Trier).`,
+    en: `<strong>Independent, non-commercial project — not affiliated with or endorsed by Weyermann® Specialty Malts.</strong> Aroma vectors digitized from Weyermann®'s publicly published Malt Aroma Wheels® for educational use. Predictions are model estimates for recipe design, not lab measurements. Wheels and trademarks © Weyermann® Specialty Malts. Method inspired by Voigt &amp; Féchir (Trier University) malt-aroma research.`,
+    de: `<strong>Unabhängiges, nicht-kommerzielles Projekt — nicht mit Weyermann® Spezialmalze verbunden oder von ihnen unterstützt.</strong> Aromawerte aus den öffentlich veröffentlichten Malzaromarädern® von Weyermann® für Bildungszwecke digitalisiert. Vorhersagen sind Modellschätzungen für den Rezeptentwurf, keine Labormessungen. Räder und Marken © Weyermann® Spezialmalze. Methode inspiriert von Voigt &amp; Féchir (Hochschule Trier).`,
   },
   "foot-blurb": {
     en: `Predict a beer's flavor by superimposing the Malt Aroma Wheels of a Weyermann® grist — aroma radar, color, ABV, style match and a tasting note.`,
