@@ -18,7 +18,7 @@ const UI = {
   malts:        { en: "Malts", de: "Malze" }, grist: { en: "Grist", de: "Schüttung" },
   recipes:      { en: "Recipes", de: "Rezepte" }, predictedBeer: { en: "Predicted beer", de: "Vorhergesagtes Bier" },
   dragHint:     { en: "drag or click malts here", de: "Malze hierher ziehen oder anklicken" },
-  searchPh:     { en: "Search 57 Weyermann malts…", de: "57 Weyermann-Malze suchen…" },
+  searchPh:     { en: "Search 57 Weyermann® malts…", de: "57 Weyermann®-Malze suchen…" },
   gristEmpty:   { en: "Drag or click malts to build your grist.", de: "Malze ziehen oder anklicken, um die Schüttung zu bauen." },
   noMatch:      { en: "No malts match.", de: "Keine Malze gefunden." },
   noAromaTip:   { en: "No aroma wheel (extract/kit) — excluded from aroma prediction", de: "Kein Aromarad (Extrakt/Kit) — nicht in der Aromavorhersage" },
@@ -34,7 +34,7 @@ const UI = {
   closestStyles:{ en: "Closest beer styles", de: "Nächste Bierstile" }, onTarget: { en: "on target", de: "im Ziel" },
   more: { en: "more", de: "mehr" }, less: { en: "less", de: "weniger" },
   dominantNotes:{ en: "Dominant notes", de: "Dominante Noten" }, whatDrives: { en: "What drives them", de: "Woher sie kommen" }, from: { en: "from", de: "aus" },
-  actualWheel:  { en: "Actual Weyermann wheel", de: "Original Weyermann-Rad" },
+  actualWheel:  { en: "Actual Weyermann® wheel", de: "Original Weyermann®-Rad" },
   aboutTitle:   { en: "What this is & how to use it", de: "Was das ist & wie man es nutzt" },
   whatDoes:     { en: "What it does", de: "Was es macht" }, howUse: { en: "How a brewer uses it", de: "Wie ein Brauer es nutzt" },
   indieTag:     { en: "Independent, non-commercial tool", de: "Unabhängiges, nicht-kommerzielles Werkzeug" },
@@ -71,8 +71,8 @@ export const sName = name => (LANG === "de" && S[name]) ? S[name] : name;
 // Rich HTML blocks (author-controlled content). Keyed by element id.
 const CONTENT = {
   notice: {
-    en: `<strong>Independent, non-commercial tool.</strong> Not an official Weyermann® resource and not affiliated with or endorsed by Weyermann® Specialty Malts. Aroma data digitized from Weyermann's publicly published Malt Aroma Wheels® for educational, non-profit use. All wheels and trademarks © Weyermann®.`,
-    de: `<strong>Unabhängiges, nicht-kommerzielles Werkzeug.</strong> Keine offizielle Weyermann®-Ressource und weder mit Weyermann® Spezialmalze verbunden noch von ihnen unterstützt. Aromadaten aus Weyermanns öffentlich veröffentlichten Malzaromarädern® für Bildungs- und Non-Profit-Zwecke digitalisiert. Alle Räder und Marken © Weyermann®.`,
+    en: `<strong>Independent, non-commercial tool.</strong> Not an official Weyermann® resource and not affiliated with or endorsed by Weyermann® Specialty Malts. Aroma data digitized from Weyermann®'s publicly published Malt Aroma Wheels® for educational, non-profit use. All wheels and trademarks © Weyermann®.`,
+    de: `<strong>Unabhängiges, nicht-kommerzielles Werkzeug.</strong> Keine offizielle Weyermann®-Ressource und weder mit Weyermann® Spezialmalze verbunden noch von ihnen unterstützt. Aromadaten aus den öffentlich veröffentlichten Malzaromarädern® von Weyermann® für Bildungs- und Non-Profit-Zwecke digitalisiert. Alle Räder und Marken © Weyermann®.`,
   },
   "about-what": {
     en: `<p>Every Weyermann® malt ships with a <strong>Malt Aroma Wheel</strong> — a sensory fingerprint scored 0–5 across 22 flavor notes (coffee, toffee, biscuit, smoke, and so on). Those wheels describe one malt at a time. Aroma Forge <strong>superimposes them</strong>: tell it your grist and it blends the wheels — weighted by how much of each malt you use <em>and</em> how potent that malt is — into a single predicted flavor fingerprint for the finished beer, plus its color, gravity and ABV. It builds on Prof. Voigt's malt-aroma research at Trier, taken from single malts to whole recipes.</p>`,

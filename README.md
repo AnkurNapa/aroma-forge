@@ -10,8 +10,8 @@ predicted color (EBC/SRM), OG/ABV, and a tasting note.
 
 ## How it works
 
-- **Data**: each of 41 Weyermann Wort aroma wheels was digitized into a 22-descriptor
-  0–5 vector. Malt specs (color, extract) come from Weyermann brewery datasheets.
+- **Data**: each of 41 Weyermann® Wort aroma wheels was digitized into a 22-descriptor
+  0–5 vector. Malt specs (color, extract) come from Weyermann® brewery datasheets.
 - **Superposition**: combined intensity per descriptor blends a mass-weighted average
   (base character) with the strongest single contributor (so potent minority malts
   register). Calibrated so a single malt reproduces its own wheel.
