@@ -18,7 +18,7 @@ export function renderPalette(container, malts, { onAdd, inGrist }) {
   function draw(q) {
     list.innerHTML = "";
     for (const [cat, items] of Object.entries(byCat)) {
-      const shown = items.filter(m => !q || m.name.toLowerCase().includes(q) || cat.toLowerCase().includes(q));
+      const shown = items.filter(m => !q || m.name.replace(/®/g, "").toLowerCase().includes(q) || cat.toLowerCase().includes(q));
       if (!shown.length) continue;
       list.append(el("div", { class: "cat-head", text: cat }));
       for (const m of shown) {

@@ -1,7 +1,7 @@
 [
  {
   "id": "abbey-malt",
-  "name": "Abbey Malt",
+  "name": "Abbey Malt®",
   "category": "Caramel",
   "ebc_min": 40,
   "ebc_max": 50,
@@ -49,7 +49,7 @@
  },
  {
   "id": "barke-munich-malt",
-  "name": "Barke Munich Malt",
+  "name": "Barke® Munich Malt",
   "category": "Kilned base",
   "ebc_min": 17,
   "ebc_max": 22,
@@ -65,7 +65,7 @@
  },
  {
   "id": "barke-pilsner-malt",
-  "name": "Barke Pilsner Malt",
+  "name": "Barke® Pilsner Malt",
   "category": "Base (Pilsner/Pale)",
   "ebc_min": 2.5,
   "ebc_max": 4.5,
@@ -81,7 +81,7 @@
  },
  {
   "id": "barke-vienna-malt",
-  "name": "Barke Vienna Malt",
+  "name": "Barke® Vienna Malt",
   "category": "Kilned base",
   "ebc_min": 6,
   "ebc_max": 9,
@@ -209,7 +209,7 @@
  },
  {
   "id": "caraamber",
-  "name": "Caraamber",
+  "name": "CARAAMBER®",
   "category": "Caramel",
   "ebc_min": 60,
   "ebc_max": 80,
@@ -225,7 +225,7 @@
  },
  {
   "id": "caraaroma",
-  "name": "Caraaroma",
+  "name": "CARAAROMA®",
   "category": "Caramel",
   "ebc_min": 350,
   "ebc_max": 450,
@@ -241,7 +241,7 @@
  },
  {
   "id": "carabelge",
-  "name": "Carabelge",
+  "name": "CARABELGE®",
   "category": "Caramel",
   "ebc_min": 30,
   "ebc_max": 35,
@@ -257,7 +257,7 @@
  },
  {
   "id": "carabohemian",
-  "name": "Carabohemian",
+  "name": "CARABOHEMIAN®",
   "category": "Caramel",
   "ebc_min": 170,
   "ebc_max": 220,
@@ -273,7 +273,7 @@
  },
  {
   "id": "carafa-special-type-1",
-  "name": "Carafa Special Type 1",
+  "name": "CARAFA® Special Type 1",
   "category": "Roasted",
   "ebc_min": 800,
   "ebc_max": 1000,
@@ -289,7 +289,7 @@
  },
  {
   "id": "carafa-special-type-2",
-  "name": "Carafa Special Type 2",
+  "name": "CARAFA® Special Type 2",
   "category": "Roasted",
   "ebc_min": 1050,
   "ebc_max": 1250,
@@ -305,7 +305,7 @@
  },
  {
   "id": "carafa-special-type-3",
-  "name": "Carafa Special Type 3",
+  "name": "CARAFA® Special Type 3",
   "category": "Roasted",
   "ebc_min": 1300,
   "ebc_max": 1500,
@@ -321,7 +321,7 @@
  },
  {
   "id": "carafa-type-1",
-  "name": "Carafa Type 1",
+  "name": "CARAFA® Type 1",
   "category": "Roasted",
   "ebc_min": 800,
   "ebc_max": 1000,
@@ -337,7 +337,7 @@
  },
  {
   "id": "carafa-type-2",
-  "name": "Carafa Type 2",
+  "name": "CARAFA® Type 2",
   "category": "Roasted",
   "ebc_min": 1050,
   "ebc_max": 1250,
@@ -353,7 +353,7 @@
  },
  {
   "id": "carafa-type-3",
-  "name": "Carafa Type 3",
+  "name": "CARAFA® Type 3",
   "category": "Roasted",
   "ebc_min": 1300,
   "ebc_max": 1500,
@@ -369,7 +369,7 @@
  },
  {
   "id": "carafoam",
-  "name": "Carafoam",
+  "name": "CARAFOAM®",
   "category": "Caramel",
   "ebc_min": 2.5,
   "ebc_max": 6.5,
@@ -385,7 +385,7 @@
  },
  {
   "id": "carahell",
-  "name": "Carahell",
+  "name": "CARAHELL®",
   "category": "Caramel",
   "ebc_min": 20,
   "ebc_max": 30,
@@ -401,7 +401,7 @@
  },
  {
   "id": "caramunich-type-1",
-  "name": "Caramunich Type 1",
+  "name": "CARAMUNICH® Type 1",
   "category": "Caramel",
   "ebc_min": 80,
   "ebc_max": 100,
@@ -417,7 +417,7 @@
  },
  {
   "id": "caramunich-type-2",
-  "name": "Caramunich Type 2",
+  "name": "CARAMUNICH® Type 2",
   "category": "Caramel",
   "ebc_min": 110,
   "ebc_max": 130,
@@ -433,7 +433,7 @@
  },
  {
   "id": "caramunich-type-3",
-  "name": "Caramunich Type 3",
+  "name": "CARAMUNICH® Type 3",
   "category": "Caramel",
   "ebc_min": 140,
   "ebc_max": 160,
@@ -449,7 +449,7 @@
  },
  {
   "id": "carared",
-  "name": "Carared",
+  "name": "CARARED®",
   "category": "Caramel",
   "ebc_min": 40,
   "ebc_max": 60,
@@ -465,7 +465,7 @@
  },
  {
   "id": "cararye",
-  "name": "Cararye",
+  "name": "CARARYE®",
   "category": "Caramel",
   "ebc_min": 150,
   "ebc_max": 200,
@@ -481,7 +481,7 @@
  },
  {
   "id": "carawheat",
-  "name": "Carawheat",
+  "name": "CARAWHEAT®",
   "category": "Caramel",
   "ebc_min": 110,
   "ebc_max": 140,
@@ -609,7 +609,7 @@
  },
  {
   "id": "isaria-1924",
-  "name": "Isaria 1924",
+  "name": "Isaria 1924®",
   "category": "Base (Pilsner/Pale)",
   "ebc_min": 7,
   "ebc_max": 9,
@@ -625,7 +625,7 @@
  },
  {
   "id": "lme-sinamar",
-  "name": "Lme Sinamar",
+  "name": "LME SINAMAR®",
   "category": "Extract",
   "ebc_min": 8100,
   "ebc_max": 8600,
@@ -817,7 +817,7 @@
  },
  {
   "id": "special-w",
-  "name": "Special W",
+  "name": "Special W®",
   "category": "Caramel",
   "ebc_min": 280,
   "ebc_max": 320,
